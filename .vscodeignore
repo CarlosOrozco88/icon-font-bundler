@@ -1,0 +1,16 @@
+.editorconfig
+.eslintrc.json
+.git
+.gitignore
+.prettierrc.json
+.prettierignore
+babel.config.json
+jsconfig.json
+node_modules
+webpack.config.js
+src
+.github
+.vscode
+
+.DS_Store
+*.vsix
