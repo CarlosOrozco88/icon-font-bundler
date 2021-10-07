@@ -1,25 +1,26 @@
 import { FontAssetType, OtherAssetType } from 'fantasticon';
-import { window, workspace, Uri, ProgressLocation, QuickPickItem } from 'vscode';
+import { window, workspace, Uri, ProgressLocation, QuickPickItem, Progress } from 'vscode';
 import path from 'path';
 
 import Utils from '../Utils/Utils';
+import { CONFIG_FILE_NAME } from '../Utils/Utils';
 import Log from '../Utils/Log';
 import assert from 'assert';
 
 import FontTypes from './types';
-import { IconFontBundlerList, Level } from '../Types/Types';
+import { IconFontBundlerFontConfig, IconFontBundlerItem, IconFontBundlerList, Level } from '../Types/Types';
 
 export default {
   async askFontToGenerate() {
-    let oFontConfig = undefined;
+    let oFontConfig: IconFontBundlerItem;
 
     try {
-      let aConfigFiles = await Utils.getAllConfigFiles();
+      const aConfigFiles = await Utils.getAllConfigFiles();
 
       let aFonts: IconFontBundlerList = [];
-      let qpOptions = [];
+      const qpOptions: Array<QuickPickItem> = [];
       aConfigFiles.forEach((oFile) => {
-        let { configFile, folderName } = oFile;
+        const { configFile, folderName } = oFile;
         aFonts = aFonts.concat(
           configFile.map((font) => {
             qpOptions.push({
@@ -35,8 +36,8 @@ export default {
       });
 
       if (aFonts.length >= 1) {
-        let fontToGenerate: QuickPickItem = await new Promise(async (resolve, reject) => {
-          let fontToGenerateQp = await window.createQuickPick();
+        const fontToGenerate: QuickPickItem = await new Promise(async (resolve, reject) => {
+          const fontToGenerateQp = await window.createQuickPick();
           fontToGenerateQp.title = 'Icon Font Bundler > Select font';
           fontToGenerateQp.items = qpOptions;
           fontToGenerateQp.placeholder = 'Select font to generate';
@@ -52,44 +53,98 @@ export default {
           fontToGenerateQp.show();
         });
         // fspath from selected project
-        oFontConfig = aFonts.find((oFontApp) => {
+        const selectedFont = aFonts.find((oFontApp) => {
           return `${oFontApp.font.name} from ${oFontApp.folderName}` == fontToGenerate.description;
         });
+
+        if (selectedFont) {
+          oFontConfig = selectedFont;
+        } else {
+          throw new Error(`No ${CONFIG_FILE_NAME} config files found`);
+        }
+
+        await window.withProgress(
+          {
+            location: ProgressLocation.Notification,
+            title: `ui5-tools > Generating font ${oFontConfig.font.name}`,
+            cancellable: true,
+          },
+          async (progress, token) => {
+            await this.generateFont(oFontConfig, progress);
+            window.showInformationMessage(`Font ${oFontConfig.font.name} generated successfully`);
+          }
+        );
       }
-    } catch (e) {
-      oFontConfig = undefined;
-    }
-    try {
-      await this.generateFont(oFontConfig);
-    } catch (oError) {
+    } catch (oError: any) {
       Log.general(oError.message, Level.ERROR);
       window.showErrorMessage(oError.message);
     }
   },
 
-  async generateFont(oFontConfig) {
-    let { font, baseFsPath, folderName } = oFontConfig;
+  async generateAllFonts() {
+    try {
+      const aConfigFiles = await Utils.getAllConfigFiles();
+      assert(aConfigFiles.length > 0, `No ${CONFIG_FILE_NAME} config files found`);
+
+      let aFonts: IconFontBundlerList = [];
+      aConfigFiles.forEach((oFile) => {
+        const { configFile } = oFile;
+        aFonts = aFonts.concat(
+          configFile.map((font) => {
+            return {
+              ...oFile,
+              font: font,
+            };
+          })
+        );
+      });
+
+      assert(aFonts.length > 0, `No fonts found in any ${CONFIG_FILE_NAME} config file`);
+
+      await window.withProgress(
+        {
+          location: ProgressLocation.Notification,
+          title: `ui5-tools > Generating all fonts`,
+          cancellable: true,
+        },
+        async (progress, token) => {
+          const multiplier = 1 / aFonts.length;
+          for (const oFontConfig of aFonts) {
+            await this.generateFont(oFontConfig, progress, multiplier);
+          }
+          window.showInformationMessage(`All font bundles generated successfully`);
+        }
+      );
+    } catch (oError: any) {
+      Log.general(oError.message, Level.ERROR);
+      window.showErrorMessage(oError.message);
+    }
+  },
+
+  async generateFont(oFontConfig: IconFontBundlerItem, progress?: Progress<any>, multiplier = 1) {
+    const { font, baseFsPath } = oFontConfig;
 
     assert(!!font.type, `Property 'type' is mandatory`);
     assert(!!font.name, `Property 'name' is mandatory`);
     assert(!!font.outputDir, `Property 'outputDir' is mandatory`);
 
-    let aDefaultAssetTypes = [OtherAssetType.HTML, OtherAssetType.CSS, OtherAssetType.JSON];
+    const aDefaultAssetTypes = [OtherAssetType.HTML, OtherAssetType.CSS, OtherAssetType.JSON];
     font.assetTypes = font.assetTypes || aDefaultAssetTypes;
     assert(Array.isArray(font.assetTypes), `Property 'assetTypes' must be an array`);
 
     font.fontTypes = font.fontTypes || [FontAssetType.TTF, FontAssetType.EOT, FontAssetType.WOFF2, FontAssetType.WOFF];
     assert(Array.isArray(font.fontTypes), `Property 'fontTypes' must be an array`);
 
-    let aExcluded = font.assetTypes.filter((sAsset) => {
+    const aExcluded = font.assetTypes.filter((sAsset) => {
       return !aDefaultAssetTypes.includes(sAsset);
     });
     assert(!aExcluded.length, `Property 'assetTypes' only accept ${aDefaultAssetTypes.toString()} values`);
 
-    let sTemplatePath = path.resolve(Utils.getExtensionPath(), 'templates');
-    let oFontOptions = {
+    const sTemplatePath = path.resolve(Utils.getExtensionPath(), 'templates');
+    const oFontOptions: IconFontBundlerFontConfig = {
       inputDir: path.join(baseFsPath, font.inputDir || ''),
       outputDir: path.join(baseFsPath, font.outputDir, font.name),
+      type: font.type,
       name: font.name,
       fontTypes: font.fontTypes,
       assetTypes: font.assetTypes,
@@ -110,42 +165,45 @@ export default {
       fontsUrl: font.fontsUrl || '',
     };
 
-    await window.withProgress(
-      {
-        location: ProgressLocation.Notification,
-        title: `ui5-tools > Generating font ${oFontOptions.name}`,
-        cancellable: true,
-      },
-      async (progress, token) => {
-        progress?.report({ increment: 10, message: `Cleaning destination folder...` });
+    let message = '';
+    message = Log.fonts(`Cleaning destination folder...`);
+    progress?.report({ increment: 10 * multiplier, message });
 
-        let outputUri = Uri.file(oFontOptions.outputDir);
-        try {
-          await workspace.fs.delete(outputUri, {
-            recursive: true,
-            useTrash: true,
-          });
-        } catch (oError) {}
+    const outputUri = Uri.file(oFontOptions.outputDir);
+    try {
+      await workspace.fs.delete(outputUri, {
+        recursive: true,
+        useTrash: true,
+      });
+      Log.fonts(`Destination folder cleaned successfully`, Level.SUCCESS);
+    } catch (oError) {
+      // if delete crashes, dont break loop (file not existing, etc)
+      Log.fonts(`Destination folder is already clean`);
+    }
 
-        progress?.report({ increment: 10, message: `Creating destination folder...` });
-        await workspace.fs.createDirectory(outputUri);
+    message = Log.fonts(`Creating destination folder...`);
+    progress?.report({ increment: 10 * multiplier, message });
+    await workspace.fs.createDirectory(outputUri);
+    Log.fonts(`Destination folder created successfully`, Level.SUCCESS);
 
-        progress?.report({ increment: 30, message: `Generating folder...` });
-        await this.generate(oFontOptions, oFontConfig, progress);
-      }
-    );
+    message = Log.fonts(`Begin font generation...`);
+    progress?.report({ increment: 30 * multiplier, message });
+    await this.generate(oFontOptions, oFontConfig, progress, multiplier);
 
-    window.showInformationMessage(`Font ${oFontOptions.name} generated in project ${folderName} at ${font.outputDir}`);
+    Log.fonts(`Font ${oFontOptions.name} generated at successfully ${oFontOptions.outputDir}`, Level.SUCCESS);
   },
 
-  async generate(oFontOptions, oFontConfig, progress) {
-    let { font } = oFontConfig;
+  async generate(
+    oFontOptions: IconFontBundlerFontConfig,
+    oFontConfig: IconFontBundlerItem,
+    progress?: Progress<any>,
+    multiplier = 1
+  ) {
+    const { font } = oFontConfig;
 
     assert(FontTypes[font.type], `Property 'type' (${font.type}) is not supported`);
 
-    let FontGenrator = FontTypes[font.type];
-    await FontGenrator.build(oFontOptions, oFontConfig, progress);
+    const FontGenerator = FontTypes[font.type];
+    await FontGenerator.build(oFontOptions, oFontConfig, progress, multiplier);
   },
-
-  generateAllFonts() {},
 };

@@ -1,10 +1,11 @@
-import { commands } from 'vscode';
+import { commands, ExtensionContext } from 'vscode';
 
 // Fonts
 import Fonts from './Fonts/Fonts';
+// Utils
 import Log from './Utils/Log';
 
-export async function activate(context) {
+export async function activate(context: ExtensionContext) {
   const { registerCommand } = commands;
   const { subscriptions } = context;
 
@@ -16,4 +17,6 @@ export async function activate(context) {
   subscriptions.push(registerCommand('icon-font-bundler.showOutput', () => Log.showOutput()));
 }
 
-export function deactivate() {}
+export function deactivate(): void {
+  // deactivate
+}

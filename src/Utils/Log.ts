@@ -8,24 +8,30 @@ const Log = {
     iconFontBundlerOutput.show();
   },
 
-  log(sText: string, sLevel: Level = Level.LOG): void {
-    let oDate = new Date();
-    let sDate = oDate.toLocaleTimeString();
-    let sNewLine = `[${sLevel} - ${sDate}] ${sText}`;
+  log(sPrev: string, sText: string, sLevel: Level = Level.LOG): string {
+    const oDate = new Date();
+    const sDate = oDate.toLocaleTimeString();
+    const sLevelExpanded = sLevel + '       '.slice(0, 7 - sLevel.length);
+    const sNewLine = `[${sLevelExpanded} - ${sDate}] ${sPrev}: ${sText}`;
     iconFontBundlerOutput.appendLine(sNewLine);
-    return console.log(sNewLine);
+    console.log(sNewLine);
+    return sText;
   },
 
-  general(sText: string, sLevel?: Level): void {
-    return Log.log(`General: ${sText}`, sLevel);
+  general(sText: string, sLevel?: Level): string {
+    return Log.log(`General`, sText, sLevel);
   },
 
-  fontastic(sText: string, sLevel?: Level): void {
-    return Log.log(`Fontastic: ${sText}`, sLevel);
+  fonts(sText: string, sLevel?: Level): string {
+    return Log.log(`Fonts`, sText, sLevel);
   },
 
-  fontawesome(sText: string, sLevel?: Level): void {
-    return Log.log(`FontAwesome: ${sText}`, sLevel);
+  fantasticon(sText: string, sLevel?: Level): string {
+    return Log.log(`Fantasticon`, sText, sLevel);
+  },
+
+  fontawesome(sText: string, sLevel?: Level): string {
+    return Log.log(`FontAwesome`, sText, sLevel);
   },
 };
 

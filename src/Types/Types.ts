@@ -1,34 +1,52 @@
+import { FontAssetType, OtherAssetType } from 'fantasticon';
 
-export interface IconFontBundlerConfig {
+export interface Templates {
+  css: string;
+  html: string;
+}
+
+export interface IconFontBundlerFontConfig {
   type: IconFontBundlerType;
   family?: string;
   version?: string;
   inputDir: string;
   outputDir: string;
-  assetTypes: string[];
-  fontTypes: string[];
+  assetTypes?: OtherAssetType[];
+  fontTypes?: FontAssetType[];
   prefix?: string;
   name?: string;
+  formatOptions?: Record<string, any>;
   normalize?: boolean;
+  templates?: Templates;
+  codepoints?: Record<string, any>;
+  assets?: Record<string, any>;
+  fontHeight?: number;
+  round?: number;
+  descent?: number;
+  selector?: string;
+  tag?: string;
+  fontsUrl?: string;
 }
 
-export interface IconFontBundlerFileArray extends Array<IconFontBundlerConfig>{}
+export type IconFontBundlerConfigFile = Array<IconFontBundlerFontConfig>;
 
 export interface IconFontBundlerFileData {
-  configFile: IconFontBundlerFileArray;
+  configFile: IconFontBundlerConfigFile;
   fsPath: string;
   baseFsPath: string;
   folderName: string;
-} 
+}
+
+export type IconFontBundlerFileDataArray = Array<IconFontBundlerFileData>;
 
 export interface IconFontBundlerItem extends IconFontBundlerFileData {
-  font: IconFontBundlerConfig
+  font: IconFontBundlerFontConfig;
 }
-export interface IconFontBundlerList extends Array<IconFontBundlerItem> {} 
+export type IconFontBundlerList = Array<IconFontBundlerItem>;
 
 export enum IconFontBundlerType {
-  fantasticon = "fantasticon",
-  fontawesome = "fontawesome"
+  fantasticon = 'fantasticon',
+  fontawesome = 'fontawesome',
 }
 export interface Log {
   log(sMessage: string): void;
@@ -39,7 +57,6 @@ export interface Log {
   error(sMessage: string): void;
 }
 
-
 export enum Level {
   LOG = 'LOG',
   ERROR = 'ERROR',
@@ -48,4 +65,3 @@ export enum Level {
   INFO = 'INFO',
   WARNING = 'WARNING',
 }
-
