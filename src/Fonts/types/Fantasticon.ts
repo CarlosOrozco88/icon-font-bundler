@@ -1,7 +1,7 @@
 import { generateFonts } from 'fantasticon';
 import { workspace, Uri, Progress } from 'vscode';
-import path from 'path';
-import assert from 'assert';
+import * as path from 'path';
+import * as assert from 'assert';
 import { IconFontBundlerFontConfig, IconFontBundlerItem, Level } from '../../Types/Types';
 import Log from '../../Utils/Log';
 

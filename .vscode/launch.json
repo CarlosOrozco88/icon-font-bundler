@@ -14,10 +14,7 @@
         "--disable-extensions",
         "--extensionDevelopmentPath=${workspaceRoot}"
       ],
-      "stopOnEntry": false,
-      "outFiles": [
-          "${workspaceRoot}/dist/src/**/*.js"
-      ],
+      "outFiles": [ "${workspaceRoot}/out/**/*.js" ],
       "sourceMaps": true,
       "preLaunchTask": "npm: watch"
     },
@@ -29,9 +26,9 @@
 			"args": [
         "--disable-extensions",
 				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/dist/test/suite/index"
+				"--extensionTestsPath=${workspaceFolder}/out/test/suite/index"
 			],
-			"outFiles": ["${workspaceFolder}/dist/test/**/*.js"],
+			"outFiles": ["${workspaceFolder}/out/test/**/*.js"],
 			"preLaunchTask": "npm: watch"
 		}
   ]

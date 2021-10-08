@@ -33,7 +33,7 @@
   "activationEvents": [
     "onStartupFinished"
   ],
-  "main": "./dist/extension.js",
+  "main": "./out/extension.js",
   "contributes": {
     "configuration": {
       "title": "icon-font-bundler",
@@ -68,7 +68,8 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "webpack --mode production",
+    "vscode:prepublish": "npm run webpack-prod",
+    "vscode:prepackage": "npm run webpack-prod",
     "webpack": "webpack --mode development",
     "webpack-dev": "webpack --mode development --watch",
     "webpack-prod": "webpack --mode production",
@@ -76,7 +77,7 @@
     "watch": "tsc -watch -p ./",
     "compile": "tsc -p ./",
     "pretest": "npm run compile",
-    "test": "node ./test/runTest.js"
+    "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
     "@types/glob": "^7.1.4",

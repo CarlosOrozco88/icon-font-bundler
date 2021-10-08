@@ -1,0 +1,9 @@
+[
+  {
+    "inputDir": "svg/",
+    "outputDir": "dist/",
+    "prefix": "test-fantasticon",
+    "name": "test-fantasticon",
+    "normalize": true
+  }
+]

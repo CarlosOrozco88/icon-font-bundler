@@ -1,0 +1,20 @@
+[
+  {
+    "type": "fontawesome",
+    "family": "solid",
+    "name": "fas",
+    "outputDir": "webapp/fonts/fontawesome/"
+  },
+  {
+    "type": "fontawesome",
+    "family": "regular",
+    "name": "far",
+    "outputDir": "webapp/fonts/fontawesome/"
+  },
+  {
+    "type": "fontawesome",
+    "family": "brands",
+    "name": "fab",
+    "outputDir": "webapp/fonts/fontawesome/"
+  }
+]

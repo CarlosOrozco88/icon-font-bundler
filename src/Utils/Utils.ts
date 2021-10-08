@@ -1,7 +1,7 @@
 import { workspace, RelativePattern, extensions, Uri } from 'vscode';
-import path from 'path';
-import https from 'https';
-import http from 'http';
+import * as path from 'path';
+import * as https from 'https';
+import * as http from 'http';
 
 import Log from './Log';
 import { IconFontBundlerFileDataArray, IconFontBundlerFileData } from '../Types/Types';

@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  ignorePatterns: ['dist'],
+  ignorePatterns: ['out'],
   env: {
     browser: false,
     commonjs: true,

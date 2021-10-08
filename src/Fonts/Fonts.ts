@@ -1,11 +1,11 @@
 import { FontAssetType, OtherAssetType } from 'fantasticon';
 import { window, workspace, Uri, ProgressLocation, QuickPickItem, Progress } from 'vscode';
-import path from 'path';
+import * as path from 'path';
 
 import Utils from '../Utils/Utils';
 import { CONFIG_FILE_NAME } from '../Utils/Utils';
 import Log from '../Utils/Log';
-import assert from 'assert';
+import * as assert from 'assert';
 
 import FontTypes from './types';
 import { IconFontBundlerFontConfig, IconFontBundlerItem, IconFontBundlerList, Level } from '../Types/Types';
@@ -142,8 +142,8 @@ export default {
 
     const sTemplatePath = path.resolve(Utils.getExtensionPath(), 'templates');
     const oFontOptions: IconFontBundlerFontConfig = {
-      inputDir: path.join(baseFsPath, font.inputDir || ''),
-      outputDir: path.join(baseFsPath, font.outputDir, font.name),
+      inputDir: path.resolve(baseFsPath, font.inputDir || ''),
+      outputDir: path.resolve(baseFsPath, font.outputDir, font.name),
       type: font.type,
       name: font.name,
       fontTypes: font.fontTypes,

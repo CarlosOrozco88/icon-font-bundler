@@ -1,9 +1,9 @@
 import { FontAssetType } from 'fantasticon';
 import { workspace, Uri, Progress } from 'vscode';
-import path from 'path';
-import fs from 'fs';
+import * as path from 'path';
+import * as fs from 'fs';
 
-import Handlebars from 'handlebars';
+import * as Handlebars from 'handlebars';
 import { IconFontBundlerFontConfig, IconFontBundlerItem } from '../Types/Types';
 import Log from '../Utils/Log';
 
