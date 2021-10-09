@@ -8,13 +8,13 @@ export interface Templates {
 export interface IconFontBundlerFontConfig {
   type: IconFontBundlerType;
   family?: string;
-  version?: string;
+  // version?: string;
   inputDir: string;
   outputDir: string;
   assetTypes?: OtherAssetType[];
   fontTypes?: FontAssetType[];
   prefix?: string;
-  name?: string;
+  name: string;
   formatOptions?: Record<string, any>;
   normalize?: boolean;
   templates?: Templates;

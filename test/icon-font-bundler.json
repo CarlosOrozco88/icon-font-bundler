@@ -1,0 +1,46 @@
+[
+  {
+    "inputDir": "fantasticon-1/svg/",
+    "outputDir": "fantasticon-1/created/standard/",
+    "type": "fantasticon",
+    "name": "test-fantasticon-1"
+  },
+  {
+    "inputDir": "fantasticon-1/svg/",
+    "outputDir": "fantasticon-1/created/normalize/",
+    "type": "fantasticon",
+    "name": "test-fantasticon-1-normalize",
+    "normalize": true
+  },
+  {
+    "inputDir": "fantasticon-2/svg/",
+    "outputDir": "fantasticon-2/created/standard/",
+    "type": "fantasticon",
+    "name": "test-fantasticon-2"
+  },
+  {
+    "inputDir": "fantasticon-2/svg/",
+    "outputDir": "fantasticon-2/created/normalize/",
+    "type": "fantasticon",
+    "name": "test-fantasticon-2-normalize",
+    "normalize": true
+  },
+  {
+    "type": "fontawesome",
+    "family": "solid",
+    "name": "test-fas",
+    "outputDir": "fontawesome/created/test-fas/"
+  },
+  {
+    "type": "fontawesome",
+    "family": "regular",
+    "name": "test-far",
+    "outputDir": "fontawesome/created/test-far/"
+  },
+  {
+    "type": "fontawesome",
+    "family": "brands",
+    "name": "test-fab",
+    "outputDir": "fontawesome/created/test-fab/"
+  }
+]

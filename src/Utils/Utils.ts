@@ -1,7 +1,7 @@
 import { workspace, RelativePattern, extensions, Uri } from 'vscode';
-import * as path from 'path';
-import * as https from 'https';
-import * as http from 'http';
+import path from 'path';
+import https from 'https';
+import http from 'http';
 
 import Log from './Log';
 import { IconFontBundlerFileDataArray, IconFontBundlerFileData } from '../Types/Types';
@@ -10,51 +10,47 @@ export const CONFIG_FILE_NAME = 'icon-font-bundler.json';
 
 const Utils = {
   async getAllConfigFiles(): Promise<IconFontBundlerFileDataArray> {
-    const aWorkspacesPromises = [];
     const workspaceFolders = workspace.workspaceFolders || [];
 
+    const aConfigFiles = [];
+    const aConfigFilePaths: Set<string> = new Set();
     for (const wsUri of workspaceFolders) {
-      const oWorkspacePromise = workspace.findFiles(
+      const aFilesWorkspace = await workspace.findFiles(
         new RelativePattern(wsUri, `**/${CONFIG_FILE_NAME}`),
         new RelativePattern(wsUri, `**/{node_modules,.git}/`)
       );
-      aWorkspacesPromises.push(oWorkspacePromise);
+      for (const oUri of aFilesWorkspace) {
+        if (!aConfigFilePaths.has(oUri.fsPath)) {
+          try {
+            const oConfigFile = await Utils.getConfigFile(oUri.fsPath);
+            aConfigFiles.push(oConfigFile);
+            aConfigFilePaths.add(oUri.fsPath);
+          } catch (error) {
+            console.log(error);
+          }
+        }
+      }
     }
-    const aWorkspaces = await Promise.all(aWorkspacesPromises);
 
-    const aPaths: Set<string> = new Set();
-    aWorkspaces.forEach((aFilesWorkspace) => {
-      aFilesWorkspace.forEach((oUri) => {
-        aPaths.add(oUri.fsPath);
-      });
-    });
+    Log.general(`${aConfigFiles.length} config files found!`);
 
-    const aFilesPromises: Array<Promise<IconFontBundlerFileData>> = [];
-    aPaths.forEach((sFsPath) => {
-      aFilesPromises.push(this.getConfigFile(sFsPath));
-    });
-
-    const aFiles = await Promise.all(aFilesPromises);
-
-    Log.general(`${aFiles.length} config files found!`);
-
-    return aFiles;
+    return aConfigFiles;
   },
 
   async getConfigFile(fsPath: string): Promise<IconFontBundlerFileData> {
     let configFile = undefined;
     if (fsPath) {
       const oRawConfigFile = await workspace.fs.readFile(Uri.file(fsPath));
+
       configFile = JSON.parse(oRawConfigFile.toString());
     }
 
-    const fileData: IconFontBundlerFileData = {
+    return {
       configFile,
       fsPath,
       baseFsPath: fsPath.replace(CONFIG_FILE_NAME, ''),
       folderName: fsPath.replace(this.getWorkspaceRootPath(), '').replace(CONFIG_FILE_NAME, ''),
     };
-    return fileData;
   },
 
   getWorkspaceRootPath() {

@@ -1,11 +1,11 @@
 import { FontAssetType, OtherAssetType } from 'fantasticon';
 import { window, workspace, Uri, ProgressLocation, QuickPickItem, Progress } from 'vscode';
-import * as path from 'path';
+import path from 'path';
 
 import Utils from '../Utils/Utils';
 import { CONFIG_FILE_NAME } from '../Utils/Utils';
 import Log from '../Utils/Log';
-import * as assert from 'assert';
+import assert from 'assert';
 
 import FontTypes from './types';
 import { IconFontBundlerFontConfig, IconFontBundlerItem, IconFontBundlerList, Level } from '../Types/Types';
@@ -143,7 +143,7 @@ export default {
     const sTemplatePath = path.resolve(Utils.getExtensionPath(), 'templates');
     const oFontOptions: IconFontBundlerFontConfig = {
       inputDir: path.resolve(baseFsPath, font.inputDir || ''),
-      outputDir: path.resolve(baseFsPath, font.outputDir, font.name),
+      outputDir: path.resolve(baseFsPath, font.outputDir),
       type: font.type,
       name: font.name,
       fontTypes: font.fontTypes,
@@ -165,6 +165,19 @@ export default {
       fontsUrl: font.fontsUrl || '',
     };
 
+    await this.cleanFolder(oFontOptions, oFontConfig, progress, multiplier);
+    await this.createFolder(oFontOptions, oFontConfig, progress, multiplier);
+    await this.buildFont(oFontOptions, oFontConfig, progress, multiplier);
+
+    Log.fonts(`Font ${oFontOptions.name} generated at successfully ${oFontOptions.outputDir}`, Level.SUCCESS);
+  },
+
+  async cleanFolder(
+    oFontOptions: IconFontBundlerFontConfig,
+    oFontConfig: IconFontBundlerItem,
+    progress?: Progress<any>,
+    multiplier = 1
+  ) {
     let message = '';
     message = Log.fonts(`Cleaning destination folder...`);
     progress?.report({ increment: 10 * multiplier, message });
@@ -180,20 +193,22 @@ export default {
       // if delete crashes, dont break loop (file not existing, etc)
       Log.fonts(`Destination folder is already clean`);
     }
-
-    message = Log.fonts(`Creating destination folder...`);
-    progress?.report({ increment: 10 * multiplier, message });
-    await workspace.fs.createDirectory(outputUri);
-    Log.fonts(`Destination folder created successfully`, Level.SUCCESS);
-
-    message = Log.fonts(`Begin font generation...`);
-    progress?.report({ increment: 30 * multiplier, message });
-    await this.generate(oFontOptions, oFontConfig, progress, multiplier);
-
-    Log.fonts(`Font ${oFontOptions.name} generated at successfully ${oFontOptions.outputDir}`, Level.SUCCESS);
   },
 
-  async generate(
+  async createFolder(
+    oFontOptions: IconFontBundlerFontConfig,
+    oFontConfig: IconFontBundlerItem,
+    progress?: Progress<any>,
+    multiplier = 1
+  ) {
+    const message = Log.fonts(`Creating destination folder...`);
+    progress?.report({ increment: 10 * multiplier, message });
+    const outputUri = Uri.file(oFontOptions.outputDir);
+    await workspace.fs.createDirectory(outputUri);
+    Log.fonts(`Destination folder created successfully`, Level.SUCCESS);
+  },
+
+  async buildFont(
     oFontOptions: IconFontBundlerFontConfig,
     oFontConfig: IconFontBundlerItem,
     progress?: Progress<any>,
@@ -203,6 +218,8 @@ export default {
 
     assert(FontTypes[font.type], `Property 'type' (${font.type}) is not supported`);
 
+    const message = Log.fonts(`Begin font generation...`);
+    progress?.report({ increment: 30 * multiplier, message });
     const FontGenerator = FontTypes[font.type];
     await FontGenerator.build(oFontOptions, oFontConfig, progress, multiplier);
   },

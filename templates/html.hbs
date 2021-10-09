@@ -8,44 +8,46 @@
         body {
             font-family: sans-serif;
             margin: 0;
-            padding: 10px 20px;
+            padding: 0.5rem;
             text-align: center;
+            background-color: #f9f9f9;
+        }
+        a {
+            color: #000000;
         }
         .preview {
-            width: 100px;
+            width: 12rem;
             display: inline-block;
-            margin: 10px;
+            margin: 0.25rem;
+            box-shadow: 1px 1px 2px 0px #b9b9b9;
+            background: #ffffff;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
         }
         .preview .inner {
             display: inline-block;
             width: 100%;
             text-align: center;
-            background: #f5f5f5;
-            -webkit-border-radius: 3px 3px 0 0;
-            -moz-border-radius: 3px 3px 0 0;
-            border-radius: 3px 3px 0 0;
+            background: #ffffff;
         }
         .preview .inner {{ baseTag }} {
-            line-height: 85px;
-            font-size: 40px;
-            color: #333;
+            line-height: 2.5rem;
+            font-size: 2.5rem;
+            color: #000000;
+            padding: 1rem;
+            box-sizing: border-box;
         }
         .label {
             display: inline-block;
             width: 100%;
-            box-sizing: border-box;
-            padding: 5px;
-            font-size: 10px;
+            font-size: 0.75rem;
             font-family: Monaco, monospace;
-            color: #666;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            background: #ddd;
-            -webkit-border-radius: 0 0 3px 3px;
-            -moz-border-radius: 0 0 3px 3px;
-            border-radius: 0 0 3px 3px;
-            color: #666;
+            background: #fff;
+            color: #585858;
         }
     </style>
 
@@ -62,10 +64,11 @@
                 <{{ ../tag }} class="{{ ../prefix }} {{ ../prefix }}-{{ @key }}"></{{ ../tag }}>
             </span>
             <br>
-            <span class='label'>{{ @key }}</span>
+            <span class='label' title='{{ @key }}'>{{ @key }}</span>
         </div>
 
     {{/ each }}
 
+    <h3>Font generated with <a href="https://marketplace.visualstudio.com/items?itemName=carlosorozcojimenez.icon-font-bundler" target="_blank">Icon Font Bundler</a></h3>
 </body>
 </html>

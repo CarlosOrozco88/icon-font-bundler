@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "test-fantasticon-2-normalize";
+    src: url("./test-fantasticon-2-normalize.ttf?02fff363cdab59b3c8285f50c809b530") format("truetype"),
+url("./test-fantasticon-2-normalize.eot?02fff363cdab59b3c8285f50c809b530#iefix") format("embedded-opentype"),
+url("./test-fantasticon-2-normalize.woff2?02fff363cdab59b3c8285f50c809b530") format("woff2"),
+url("./test-fantasticon-2-normalize.woff?02fff363cdab59b3c8285f50c809b530") format("woff");
+}
+
+i[class^="icon-"]:before, i[class*=" icon-"]:before {
+    font-family: test-fantasticon-2-normalize !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-alarma:before {
+    content: "\f101";
+}
+.icon-caigudes:before {
+    content: "\f102";
+}
+.icon-clipboard:before {
+    content: "\f103";
+}
+.icon-cuestionario:before {
+    content: "\f104";
+}
+.icon-embarazada:before {
+    content: "\f105";
+}
+.icon-glove:before {
+    content: "\f106";
+}
+.icon-hand:before {
+    content: "\f107";
+}
+.icon-laboratori:before {
+    content: "\f108";
+}
+.icon-latex:before {
+    content: "\f109";
+}
+.icon-man:before {
+    content: "\f10a";
+}
+.icon-menu:before {
+    content: "\f10b";
+}
+.icon-menu1-mid:before {
+    content: "\f10c";
+}
+.icon-menu1-top:before {
+    content: "\f10d";
+}
+.icon-menu1:before {
+    content: "\f10e";
+}
+.icon-menu2-top:before {
+    content: "\f10f";
+}
+.icon-menu2:before {
+    content: "\f110";
+}
+.icon-menu3:before {
+    content: "\f111";
+}
+.icon-microscope:before {
+    content: "\f112";
+}
+.icon-parto:before {
+    content: "\f113";
+}
+.icon-pildora:before {
+    content: "\f114";
+}
+.icon-radio:before {
+    content: "\f115";
+}
+.icon-tireta:before {
+    content: "\f116";
+}

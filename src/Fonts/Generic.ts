@@ -1,9 +1,9 @@
 import { FontAssetType } from 'fantasticon';
 import { workspace, Uri, Progress } from 'vscode';
-import * as path from 'path';
-import * as fs from 'fs';
+import path from 'path';
+import fs from 'fs';
 
-import * as Handlebars from 'handlebars';
+import Handlebars from 'handlebars';
 import { IconFontBundlerFontConfig, IconFontBundlerItem } from '../Types/Types';
 import Log from '../Utils/Log';
 
@@ -18,7 +18,7 @@ export default {
     progress?.report({ increment: 10 * multiplier, message });
 
     const templates: any = oFontOptions.templates || {};
-    oFontOptions.assetTypes?.forEach(async (sExtension) => {
+    for (const sExtension of oFontOptions.assetTypes || []) {
       const sTemplatePath = templates[sExtension];
       if (sTemplatePath) {
         const sTemplate = fs.readFileSync(sTemplatePath, { encoding: 'utf8' });
@@ -34,12 +34,12 @@ export default {
             },
           });
           const oCodePointsUri = Uri.file(path.join(oFontOptions.outputDir, `${oFontOptions.name}.${sExtension}`));
-          workspace.fs.writeFile(oCodePointsUri, Buffer.from(sFile));
+          await workspace.fs.writeFile(oCodePointsUri, Buffer.from(sFile));
         } catch (oError) {
           //debugger;
         }
       }
-    });
+    }
   },
 
   renderSrcOptions: {

@@ -14,7 +14,6 @@ const Log = {
     const sLevelExpanded = sLevel + '       '.slice(0, 7 - sLevel.length);
     const sNewLine = `[${sLevelExpanded} - ${sDate}] ${sPrev}: ${sText}`;
     iconFontBundlerOutput.appendLine(sNewLine);
-    console.log(sNewLine);
     return sText;
   },
 

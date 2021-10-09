@@ -75,7 +75,7 @@
     "webpack-prod": "webpack --mode production",
     "lint": "eslint . --ext .ts",
     "watch": "tsc -watch -p ./",
-    "compile": "tsc -p ./",
+    "compile": "tsc -p --clean ./",
     "pretest": "npm run compile",
     "test": "node ./out/test/runTest.js"
   },
@@ -83,6 +83,9 @@
     "@types/glob": "^7.1.4",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.10.3",
+    "@types/svg2ttf": "^5.0.1",
+    "@types/svgicons2svgfont": "^10.0.1",
+    "@types/ttf2woff": "^2.0.2",
     "@types/vscode": "^1.60.0",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
