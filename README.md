@@ -3,6 +3,10 @@
 <h1 align="center">IconFontBundler Extension</h1>
 </p>
 
+Bundle your set of svg into a single font file.
+
+You have a set of **examples** in [test](test) folder.
+
 
 ## Features
 
