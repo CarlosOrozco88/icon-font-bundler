@@ -1,2 +1,2 @@
 # Ignore when calculating language stats
-test/* linguist-documentation
+test/** linguist-documentation
