@@ -1,3 +1,2 @@
 # Ignore when calculating language stats
-test/* linguist-vendored
-templates/* linguist-vendored
+test/* linguist-documentation
