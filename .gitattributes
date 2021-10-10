@@ -1,3 +1,3 @@
 # Ignore when calculating language stats
-test/*
-templates/*
+test/* linguist-vendored
+templates/* linguist-vendored
