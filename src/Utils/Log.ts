@@ -32,6 +32,10 @@ const Log = {
   fontawesome(sText: string, sLevel?: Level): string {
     return Log.log(`FontAwesome`, sText, sLevel);
   },
+
+  bootstrap(sText: string, sLevel?: Level): string {
+    return Log.log(`Bootstrap`, sText, sLevel);
+  },
 };
 
 export default Log;
