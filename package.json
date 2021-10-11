@@ -2,7 +2,7 @@
   "name": "icon-font-bundler",
   "displayName": "Icon Font Bundler",
   "description": "Bundle your multiple svg into a single icon font and more",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "carlosorozcojimenez",
   "author": "Carlos Orozco Jiménez <carlos.orozco.jimenez@gmail.com>",
   "contributors": [
@@ -41,12 +41,12 @@
     },
     "keybindings": [
       {
-        "command": "icon-font-bundler.fonts.generate",
+        "command": "icon-font-bundler.generate",
         "key": "alt+f alt+f",
         "mac": "alt+f alt+f"
       },
       {
-        "command": "icon-font-bundler.fonts.generateAll",
+        "command": "icon-font-bundler.generateAll",
         "key": "alt+f alt+a",
         "mac": "alt+f alt+a"
       },
@@ -87,13 +87,13 @@
     "@types/svgicons2svgfont": "^10.0.1",
     "@types/ttf2woff": "^2.0.2",
     "@types/vscode": "^1.61.0",
-    "@typescript-eslint/eslint-plugin": "4.33.0",
-    "@typescript-eslint/parser": "4.33.0",
+    "@typescript-eslint/eslint-plugin": "5.0.0",
+    "@typescript-eslint/parser": "5.0.0",
     "@vscode/test-electron": "^1.6.2",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^9.0.1",
-    "eslint": "^7.32.0",
+    "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "glob": "^7.2.0",
@@ -101,11 +101,11 @@
     "prettier": "^2.4.1",
     "ts-loader": "^9.2.6",
     "webpack": "^5.58.1",
-    "webpack-cli": "^4.9.0"
+    "webpack-cli": "^4.9.0",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8"
   },
   "dependencies": {
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
     "fantasticon": "^1.2.3"
   }
 }
