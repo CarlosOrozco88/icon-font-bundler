@@ -42,5 +42,11 @@
     "family": "brands",
     "name": "test-fab",
     "outputDir": "fontawesome/created/test-fab/"
+  },
+  {
+    "type": "bootstrap",
+    "name": "test-bootstrap",
+    "outputDir": "bootstrap/created/test-bootstrap/",
+    "fontTypes": ["woff", "woff2"]
   }
 ]
