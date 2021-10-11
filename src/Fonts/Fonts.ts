@@ -1,6 +1,7 @@
 import { FontAssetType, OtherAssetType } from 'fantasticon';
-import { window, workspace, Uri, ProgressLocation, QuickPickItem, Progress } from 'vscode';
+import { window, workspace, Uri, ProgressLocation, QuickPickItem, Progress, RelativePattern } from 'vscode';
 import path from 'path';
+import fs from 'fs';
 
 import Utils from '../Utils/Utils';
 import { CONFIG_FILE_NAME } from '../Utils/Utils';
@@ -165,8 +166,8 @@ export default {
       fontsUrl: font.fontsUrl || '',
     };
 
-    await this.cleanFolder(oFontOptions, oFontConfig, progress, multiplier);
     await this.createFolder(oFontOptions, oFontConfig, progress, multiplier);
+    await this.cleanFolder(oFontOptions, oFontConfig, progress, multiplier);
     await this.buildFont(oFontOptions, oFontConfig, progress, multiplier);
 
     Log.fonts(`Font ${oFontOptions.name} generated at successfully ${oFontOptions.outputDir}`, Level.SUCCESS);
@@ -183,16 +184,15 @@ export default {
     progress?.report({ increment: 10 * multiplier, message });
 
     const outputUri = Uri.file(oFontOptions.outputDir);
-    try {
-      await workspace.fs.delete(outputUri, {
-        recursive: true,
+
+    const aFiles = await workspace.findFiles(new RelativePattern(outputUri, `${oFontOptions.name}.*`));
+    for (const file of aFiles) {
+      await workspace.fs.delete(file, {
         useTrash: true,
       });
-      Log.fonts(`Destination folder cleaned successfully`, Level.SUCCESS);
-    } catch (oError) {
-      // if delete crashes, dont break loop (file not existing, etc)
-      Log.fonts(`Destination folder is already clean`);
     }
+    message = aFiles.length ? `Destination folder cleaned successfully` : `Destination folder is already clean`;
+    Log.fonts(message, Level.SUCCESS);
   },
 
   async createFolder(
@@ -203,9 +203,13 @@ export default {
   ) {
     const message = Log.fonts(`Creating destination folder...`);
     progress?.report({ increment: 10 * multiplier, message });
-    const outputUri = Uri.file(oFontOptions.outputDir);
-    await workspace.fs.createDirectory(outputUri);
-    Log.fonts(`Destination folder created successfully`, Level.SUCCESS);
+    if (!fs.existsSync(oFontOptions.outputDir)) {
+      const outputUri = Uri.file(oFontOptions.outputDir);
+      await workspace.fs.createDirectory(outputUri);
+      Log.fonts(`Destination folder created successfully`, Level.SUCCESS);
+    } else {
+      Log.fonts(`Destination folder already exists`, Level.SUCCESS);
+    }
   },
 
   async buildFont(
