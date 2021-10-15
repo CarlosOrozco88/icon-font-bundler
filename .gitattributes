@@ -1,2 +1,4 @@
 # Ignore when calculating language stats
 test/** linguist-documentation
+.eslintrc.js linguist-documentation
+.webpack.config.js linguist-documentation
