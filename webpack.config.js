@@ -48,7 +48,7 @@ module.exports = {
     new webpack.ProgressPlugin(),
     new CleanWebpackPlugin(),
     new CopyPlugin({
-      patterns: [path.resolve(__dirname, 'node_modules', 'ttf2woff2', 'jssrc', 'ttf2woff2.wasm')],
+      patterns: [path.dirname(require.resolve('ttf2woff2/jssrc/ttf2woff2.wasm'))],
     }),
   ],
 };

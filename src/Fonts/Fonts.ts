@@ -67,7 +67,7 @@ export default {
         await window.withProgress(
           {
             location: ProgressLocation.Notification,
-            title: `ui5-tools > Generating font ${oFontConfig.font.name}`,
+            title: `Icon Font Bundler > Generating font ${oFontConfig.font.name}`,
             cancellable: true,
           },
           async (progress, token) => {
@@ -105,7 +105,7 @@ export default {
       await window.withProgress(
         {
           location: ProgressLocation.Notification,
-          title: `ui5-tools > Generating all fonts`,
+          title: `Icon Font Bundler > Generating all fonts`,
           cancellable: true,
         },
         async (progress, token) => {
