@@ -21,6 +21,7 @@ specifiers:
   eslint-plugin-prettier: ^4.0.0
   fantasticon: ^1.2.3
   glob: ^7.2.0
+  handlebars: ^4.7.7
   mocha: ^9.1.2
   prettier: ^2.4.1
   ts-loader: ^9.2.6
@@ -29,6 +30,7 @@ specifiers:
 
 dependencies:
   fantasticon: 1.2.3
+  handlebars: 4.7.7
 
 devDependencies:
   '@babel/core': 7.15.8
