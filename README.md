@@ -1,12 +1,11 @@
 <p align="center">
-<img src="icon.png" width="100" />
+<img src="images/icon.png" width="100" />
 <h1 align="center">IconFontBundler Extension</h1>
 </p>
 
 Bundle your set of svg into a single font file.
 
 You have a set of **examples** in [test](test) folder.
-
 
 ## Features
 
@@ -15,8 +14,16 @@ You have a set of **examples** in [test](test) folder.
 
 ## Commands
 
-- `font-builder.fonts.generate`: Generate font | Shortcut: `alt+f alt+f`
-- `font-builder.fonts.generateAll`: Generate all fonts| Shortcut: `alt+f alt+a`
+- `icon-font-bundler.generate`: Generate font | Shortcut: `alt+f alt+f`
+- `icon-font-bundler.generateAll`: Generate all fonts| Shortcut: `alt+f alt+a`
+
+### Generate Font
+
+![Create Single Font Bundle demo](./images/single-bundle.gif)
+
+### Generate All Fonts
+
+![Create Multi Font Bundle demo](./images/multi-bundle.gif)
 
 ## Credits
 
