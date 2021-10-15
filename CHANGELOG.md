@@ -1,7 +1,6 @@
 ## 0.0.2 (15-10-2021)
 - Bootstrap icons
 - Dependencies upgrade
-- Switched to pnpm
 - Improvements into update/create output files
 - Added gifs to readme
 
