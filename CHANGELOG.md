@@ -1,3 +1,7 @@
+## 0.0.3 (20-12-2021)
+- Dependencies upgrade
+- Bootstrap testing upgraded
+
 ## 0.0.2 (15-10-2021)
 - Bootstrap icons
 - Dependencies upgrade

@@ -15,6 +15,9 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-123:before {
+    content: "\f67f";
+}
 .icon-alarm-fill:before {
     content: "\f101";
 }
@@ -4232,4 +4235,388 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-yin-yang:before {
     content: "\f67e";
+}
+.icon-bandaid-fill:before {
+    content: "\f680";
+}
+.icon-bandaid:before {
+    content: "\f681";
+}
+.icon-bluetooth:before {
+    content: "\f682";
+}
+.icon-body-text:before {
+    content: "\f683";
+}
+.icon-boombox:before {
+    content: "\f684";
+}
+.icon-boxes:before {
+    content: "\f685";
+}
+.icon-dpad-fill:before {
+    content: "\f686";
+}
+.icon-dpad:before {
+    content: "\f687";
+}
+.icon-ear-fill:before {
+    content: "\f688";
+}
+.icon-ear:before {
+    content: "\f689";
+}
+.icon-envelope-check-1:before {
+    content: "\f68a";
+}
+.icon-envelope-check-fill:before {
+    content: "\f68b";
+}
+.icon-envelope-check:before {
+    content: "\f68c";
+}
+.icon-envelope-dash-1:before {
+    content: "\f68d";
+}
+.icon-envelope-dash-fill:before {
+    content: "\f68e";
+}
+.icon-envelope-dash:before {
+    content: "\f68f";
+}
+.icon-envelope-exclamation-1:before {
+    content: "\f690";
+}
+.icon-envelope-exclamation-fill:before {
+    content: "\f691";
+}
+.icon-envelope-exclamation:before {
+    content: "\f692";
+}
+.icon-envelope-plus-fill:before {
+    content: "\f693";
+}
+.icon-envelope-plus:before {
+    content: "\f694";
+}
+.icon-envelope-slash-1:before {
+    content: "\f695";
+}
+.icon-envelope-slash-fill:before {
+    content: "\f696";
+}
+.icon-envelope-slash:before {
+    content: "\f697";
+}
+.icon-envelope-x-1:before {
+    content: "\f698";
+}
+.icon-envelope-x-fill:before {
+    content: "\f699";
+}
+.icon-envelope-x:before {
+    content: "\f69a";
+}
+.icon-explicit-fill:before {
+    content: "\f69b";
+}
+.icon-explicit:before {
+    content: "\f69c";
+}
+.icon-git:before {
+    content: "\f69d";
+}
+.icon-infinity:before {
+    content: "\f69e";
+}
+.icon-list-columns-reverse:before {
+    content: "\f69f";
+}
+.icon-list-columns:before {
+    content: "\f6a0";
+}
+.icon-meta:before {
+    content: "\f6a1";
+}
+.icon-mortorboard-fill:before {
+    content: "\f6a2";
+}
+.icon-mortorboard:before {
+    content: "\f6a3";
+}
+.icon-nintendo-switch:before {
+    content: "\f6a4";
+}
+.icon-pc-display-horizontal:before {
+    content: "\f6a5";
+}
+.icon-pc-display:before {
+    content: "\f6a6";
+}
+.icon-pc-horizontal:before {
+    content: "\f6a7";
+}
+.icon-pc:before {
+    content: "\f6a8";
+}
+.icon-playstation:before {
+    content: "\f6a9";
+}
+.icon-plus-slash-minus:before {
+    content: "\f6aa";
+}
+.icon-projector-fill:before {
+    content: "\f6ab";
+}
+.icon-projector:before {
+    content: "\f6ac";
+}
+.icon-qr-code-scan:before {
+    content: "\f6ad";
+}
+.icon-qr-code:before {
+    content: "\f6ae";
+}
+.icon-quora:before {
+    content: "\f6af";
+}
+.icon-quote:before {
+    content: "\f6b0";
+}
+.icon-robot:before {
+    content: "\f6b1";
+}
+.icon-send-check-fill:before {
+    content: "\f6b2";
+}
+.icon-send-check:before {
+    content: "\f6b3";
+}
+.icon-send-dash-fill:before {
+    content: "\f6b4";
+}
+.icon-send-dash:before {
+    content: "\f6b5";
+}
+.icon-send-exclamation-1:before {
+    content: "\f6b6";
+}
+.icon-send-exclamation-fill:before {
+    content: "\f6b7";
+}
+.icon-send-exclamation:before {
+    content: "\f6b8";
+}
+.icon-send-fill:before {
+    content: "\f6b9";
+}
+.icon-send-plus-fill:before {
+    content: "\f6ba";
+}
+.icon-send-plus:before {
+    content: "\f6bb";
+}
+.icon-send-slash-fill:before {
+    content: "\f6bc";
+}
+.icon-send-slash:before {
+    content: "\f6bd";
+}
+.icon-send-x-fill:before {
+    content: "\f6be";
+}
+.icon-send-x:before {
+    content: "\f6bf";
+}
+.icon-send:before {
+    content: "\f6c0";
+}
+.icon-steam:before {
+    content: "\f6c1";
+}
+.icon-terminal-dash-1:before {
+    content: "\f6c2";
+}
+.icon-terminal-dash:before {
+    content: "\f6c3";
+}
+.icon-terminal-plus:before {
+    content: "\f6c4";
+}
+.icon-terminal-split:before {
+    content: "\f6c5";
+}
+.icon-ticket-detailed-fill:before {
+    content: "\f6c6";
+}
+.icon-ticket-detailed:before {
+    content: "\f6c7";
+}
+.icon-ticket-fill:before {
+    content: "\f6c8";
+}
+.icon-ticket-perforated-fill:before {
+    content: "\f6c9";
+}
+.icon-ticket-perforated:before {
+    content: "\f6ca";
+}
+.icon-ticket:before {
+    content: "\f6cb";
+}
+.icon-tiktok:before {
+    content: "\f6cc";
+}
+.icon-window-dash:before {
+    content: "\f6cd";
+}
+.icon-window-desktop:before {
+    content: "\f6ce";
+}
+.icon-window-fullscreen:before {
+    content: "\f6cf";
+}
+.icon-window-plus:before {
+    content: "\f6d0";
+}
+.icon-window-split:before {
+    content: "\f6d1";
+}
+.icon-window-stack:before {
+    content: "\f6d2";
+}
+.icon-window-x:before {
+    content: "\f6d3";
+}
+.icon-xbox:before {
+    content: "\f6d4";
+}
+.icon-ethernet:before {
+    content: "\f6d5";
+}
+.icon-hdmi-fill:before {
+    content: "\f6d6";
+}
+.icon-hdmi:before {
+    content: "\f6d7";
+}
+.icon-usb-c-fill:before {
+    content: "\f6d8";
+}
+.icon-usb-c:before {
+    content: "\f6d9";
+}
+.icon-usb-fill:before {
+    content: "\f6da";
+}
+.icon-usb-plug-fill:before {
+    content: "\f6db";
+}
+.icon-usb-plug:before {
+    content: "\f6dc";
+}
+.icon-usb-symbol:before {
+    content: "\f6dd";
+}
+.icon-usb:before {
+    content: "\f6de";
+}
+.icon-boombox-fill:before {
+    content: "\f6df";
+}
+.icon-displayport-1:before {
+    content: "\f6e0";
+}
+.icon-displayport:before {
+    content: "\f6e1";
+}
+.icon-gpu-card:before {
+    content: "\f6e2";
+}
+.icon-memory:before {
+    content: "\f6e3";
+}
+.icon-modem-fill:before {
+    content: "\f6e4";
+}
+.icon-modem:before {
+    content: "\f6e5";
+}
+.icon-motherboard-fill:before {
+    content: "\f6e6";
+}
+.icon-motherboard:before {
+    content: "\f6e7";
+}
+.icon-optical-audio-fill:before {
+    content: "\f6e8";
+}
+.icon-optical-audio:before {
+    content: "\f6e9";
+}
+.icon-pci-card:before {
+    content: "\f6ea";
+}
+.icon-router-fill:before {
+    content: "\f6eb";
+}
+.icon-router:before {
+    content: "\f6ec";
+}
+.icon-ssd-fill:before {
+    content: "\f6ed";
+}
+.icon-ssd:before {
+    content: "\f6ee";
+}
+.icon-thunderbolt-fill:before {
+    content: "\f6ef";
+}
+.icon-thunderbolt:before {
+    content: "\f6f0";
+}
+.icon-usb-drive-fill:before {
+    content: "\f6f1";
+}
+.icon-usb-drive:before {
+    content: "\f6f2";
+}
+.icon-usb-micro-fill:before {
+    content: "\f6f3";
+}
+.icon-usb-micro:before {
+    content: "\f6f4";
+}
+.icon-usb-mini-fill:before {
+    content: "\f6f5";
+}
+.icon-usb-mini:before {
+    content: "\f6f6";
+}
+.icon-cloud-haze2:before {
+    content: "\f6f7";
+}
+.icon-device-hdd-fill:before {
+    content: "\f6f8";
+}
+.icon-device-hdd:before {
+    content: "\f6f9";
+}
+.icon-device-ssd-fill:before {
+    content: "\f6fa";
+}
+.icon-device-ssd:before {
+    content: "\f6fb";
+}
+.icon-displayport-fill:before {
+    content: "\f6fc";
+}
+.icon-mortarboard-fill:before {
+    content: "\f6fd";
+}
+.icon-mortarboard:before {
+    content: "\f6fe";
+}
+.icon-terminal-x:before {
+    content: "\f6ff";
 }

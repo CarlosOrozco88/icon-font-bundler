@@ -4,3 +4,4 @@ node_modules
 *.vsix
 .env
 test/**/created
+.DS_Store
