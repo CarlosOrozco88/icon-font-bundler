@@ -1,3 +1,7 @@
+## 0.0.4 (28-07-2022)
+- Dependencies upgrade
+- Bootstrap testing upgraded
+
 ## 0.0.3 (20-12-2021)
 - Dependencies upgrade
 - Bootstrap testing upgraded
