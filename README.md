@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/icon.png" width="100" />
+<img src="images/icon-font-bundler.svg" width="100" />
 <h1 align="center">IconFontBundler Extension</h1>
 </p>
 
@@ -29,4 +29,3 @@ You have a set of **examples** in [test](test) folder.
 
 - Fantasticon icon-font generator: [fantasticon](https://github.com/tancredi/fantasticon) - [Tancredi Trugenberger](https://github.com/tancredi)
 - [Font-Awesome](https://fontawesome.com/) from [GitHub](https://github.com/FortAwesome/Font-Awesome)
-- Extension icon made by [Freepik](https://www.freepik.com) from [Flaticon](https://www.flaticon.com)
