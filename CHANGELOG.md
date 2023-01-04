@@ -1,3 +1,8 @@
+## 0.0.5 (04-01-2023)
+- Dependencies upgrade
+- Icon changed
+- Bootstrap testing upgraded
+
 ## 0.0.4 (28-07-2022)
 - Dependencies upgrade
 - Bootstrap testing upgraded
