@@ -17,9 +17,9 @@
     "url": "https://github.com/CarlosOrozco88/icon-font-bundler/issues"
   },
   "license": "Apache-2.0",
-  "icon": "images/icon-font-bundler.svg",
+  "icon": "images/icon-font-bundler.png",
   "engines": {
-    "vscode": "^1.63.1"
+    "vscode": "^1.74.0"
   },
   "categories": [
     "Other"
