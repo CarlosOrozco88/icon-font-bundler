@@ -5577,3 +5577,429 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-fuel-pump:before {
     content: "\f83e";
 }
+.icon-0-circle-fill:before {
+    content: "\f83f";
+}
+.icon-0-circle:before {
+    content: "\f840";
+}
+.icon-0-square-fill:before {
+    content: "\f841";
+}
+.icon-0-square:before {
+    content: "\f842";
+}
+.icon-rocket-fill:before {
+    content: "\f843";
+}
+.icon-rocket-takeoff-fill:before {
+    content: "\f844";
+}
+.icon-rocket-takeoff:before {
+    content: "\f845";
+}
+.icon-rocket:before {
+    content: "\f846";
+}
+.icon-stripe:before {
+    content: "\f847";
+}
+.icon-subscript:before {
+    content: "\f848";
+}
+.icon-superscript:before {
+    content: "\f849";
+}
+.icon-trello:before {
+    content: "\f84a";
+}
+.icon-envelope-at-fill:before {
+    content: "\f84b";
+}
+.icon-envelope-at:before {
+    content: "\f84c";
+}
+.icon-regex:before {
+    content: "\f84d";
+}
+.icon-text-wrap:before {
+    content: "\f84e";
+}
+.icon-sign-dead-end-fill:before {
+    content: "\f84f";
+}
+.icon-sign-dead-end:before {
+    content: "\f850";
+}
+.icon-sign-do-not-enter-fill:before {
+    content: "\f851";
+}
+.icon-sign-do-not-enter:before {
+    content: "\f852";
+}
+.icon-sign-intersection-fill:before {
+    content: "\f853";
+}
+.icon-sign-intersection-side-fill:before {
+    content: "\f854";
+}
+.icon-sign-intersection-side:before {
+    content: "\f855";
+}
+.icon-sign-intersection-t-fill:before {
+    content: "\f856";
+}
+.icon-sign-intersection-t:before {
+    content: "\f857";
+}
+.icon-sign-intersection-y-fill:before {
+    content: "\f858";
+}
+.icon-sign-intersection-y:before {
+    content: "\f859";
+}
+.icon-sign-intersection:before {
+    content: "\f85a";
+}
+.icon-sign-merge-left-fill:before {
+    content: "\f85b";
+}
+.icon-sign-merge-left:before {
+    content: "\f85c";
+}
+.icon-sign-merge-right-fill:before {
+    content: "\f85d";
+}
+.icon-sign-merge-right:before {
+    content: "\f85e";
+}
+.icon-sign-no-left-turn-fill:before {
+    content: "\f85f";
+}
+.icon-sign-no-left-turn:before {
+    content: "\f860";
+}
+.icon-sign-no-parking-fill:before {
+    content: "\f861";
+}
+.icon-sign-no-parking:before {
+    content: "\f862";
+}
+.icon-sign-no-right-turn-fill:before {
+    content: "\f863";
+}
+.icon-sign-no-right-turn:before {
+    content: "\f864";
+}
+.icon-sign-railroad-fill:before {
+    content: "\f865";
+}
+.icon-sign-railroad:before {
+    content: "\f866";
+}
+.icon-building-add:before {
+    content: "\f867";
+}
+.icon-building-check:before {
+    content: "\f868";
+}
+.icon-building-dash:before {
+    content: "\f869";
+}
+.icon-building-down:before {
+    content: "\f86a";
+}
+.icon-building-exclamation:before {
+    content: "\f86b";
+}
+.icon-building-fill-add:before {
+    content: "\f86c";
+}
+.icon-building-fill-check:before {
+    content: "\f86d";
+}
+.icon-building-fill-dash:before {
+    content: "\f86e";
+}
+.icon-building-fill-down:before {
+    content: "\f86f";
+}
+.icon-building-fill-exclamation:before {
+    content: "\f870";
+}
+.icon-building-fill-gear:before {
+    content: "\f871";
+}
+.icon-building-fill-lock:before {
+    content: "\f872";
+}
+.icon-building-fill-slash:before {
+    content: "\f873";
+}
+.icon-building-fill-up:before {
+    content: "\f874";
+}
+.icon-building-fill-x:before {
+    content: "\f875";
+}
+.icon-building-fill:before {
+    content: "\f876";
+}
+.icon-building-gear:before {
+    content: "\f877";
+}
+.icon-building-lock:before {
+    content: "\f878";
+}
+.icon-building-slash:before {
+    content: "\f879";
+}
+.icon-building-up:before {
+    content: "\f87a";
+}
+.icon-building-x:before {
+    content: "\f87b";
+}
+.icon-buildings-fill:before {
+    content: "\f87c";
+}
+.icon-buildings:before {
+    content: "\f87d";
+}
+.icon-bus-front-fill:before {
+    content: "\f87e";
+}
+.icon-bus-front:before {
+    content: "\f87f";
+}
+.icon-ev-front-fill:before {
+    content: "\f880";
+}
+.icon-ev-front:before {
+    content: "\f881";
+}
+.icon-globe-americas:before {
+    content: "\f882";
+}
+.icon-globe-asia-australia:before {
+    content: "\f883";
+}
+.icon-globe-central-south-asia:before {
+    content: "\f884";
+}
+.icon-globe-europe-africa:before {
+    content: "\f885";
+}
+.icon-house-add-fill:before {
+    content: "\f886";
+}
+.icon-house-add:before {
+    content: "\f887";
+}
+.icon-house-check-fill:before {
+    content: "\f888";
+}
+.icon-house-check:before {
+    content: "\f889";
+}
+.icon-house-dash-fill:before {
+    content: "\f88a";
+}
+.icon-house-dash:before {
+    content: "\f88b";
+}
+.icon-house-down-fill:before {
+    content: "\f88c";
+}
+.icon-house-down:before {
+    content: "\f88d";
+}
+.icon-house-exclamation-fill:before {
+    content: "\f88e";
+}
+.icon-house-exclamation:before {
+    content: "\f88f";
+}
+.icon-house-gear-fill:before {
+    content: "\f890";
+}
+.icon-house-gear:before {
+    content: "\f891";
+}
+.icon-house-lock-fill:before {
+    content: "\f892";
+}
+.icon-house-lock:before {
+    content: "\f893";
+}
+.icon-house-slash-fill:before {
+    content: "\f894";
+}
+.icon-house-slash:before {
+    content: "\f895";
+}
+.icon-house-up-fill:before {
+    content: "\f896";
+}
+.icon-house-up:before {
+    content: "\f897";
+}
+.icon-house-x-fill:before {
+    content: "\f898";
+}
+.icon-house-x:before {
+    content: "\f899";
+}
+.icon-person-add:before {
+    content: "\f89a";
+}
+.icon-person-down:before {
+    content: "\f89b";
+}
+.icon-person-exclamation:before {
+    content: "\f89c";
+}
+.icon-person-fill-add:before {
+    content: "\f89d";
+}
+.icon-person-fill-check:before {
+    content: "\f89e";
+}
+.icon-person-fill-dash:before {
+    content: "\f89f";
+}
+.icon-person-fill-down:before {
+    content: "\f8a0";
+}
+.icon-person-fill-exclamation:before {
+    content: "\f8a1";
+}
+.icon-person-fill-gear:before {
+    content: "\f8a2";
+}
+.icon-person-fill-lock:before {
+    content: "\f8a3";
+}
+.icon-person-fill-slash:before {
+    content: "\f8a4";
+}
+.icon-person-fill-up:before {
+    content: "\f8a5";
+}
+.icon-person-fill-x:before {
+    content: "\f8a6";
+}
+.icon-person-gear:before {
+    content: "\f8a7";
+}
+.icon-person-lock:before {
+    content: "\f8a8";
+}
+.icon-person-slash:before {
+    content: "\f8a9";
+}
+.icon-person-up:before {
+    content: "\f8aa";
+}
+.icon-scooter:before {
+    content: "\f8ab";
+}
+.icon-taxi-front-fill:before {
+    content: "\f8ac";
+}
+.icon-taxi-front:before {
+    content: "\f8ad";
+}
+.icon-amd:before {
+    content: "\f8ae";
+}
+.icon-database-add:before {
+    content: "\f8af";
+}
+.icon-database-check:before {
+    content: "\f8b0";
+}
+.icon-database-dash:before {
+    content: "\f8b1";
+}
+.icon-database-down:before {
+    content: "\f8b2";
+}
+.icon-database-exclamation:before {
+    content: "\f8b3";
+}
+.icon-database-fill-add:before {
+    content: "\f8b4";
+}
+.icon-database-fill-check:before {
+    content: "\f8b5";
+}
+.icon-database-fill-dash:before {
+    content: "\f8b6";
+}
+.icon-database-fill-down:before {
+    content: "\f8b7";
+}
+.icon-database-fill-exclamation:before {
+    content: "\f8b8";
+}
+.icon-database-fill-gear:before {
+    content: "\f8b9";
+}
+.icon-database-fill-lock:before {
+    content: "\f8ba";
+}
+.icon-database-fill-slash:before {
+    content: "\f8bb";
+}
+.icon-database-fill-up:before {
+    content: "\f8bc";
+}
+.icon-database-fill-x:before {
+    content: "\f8bd";
+}
+.icon-database-fill:before {
+    content: "\f8be";
+}
+.icon-database-gear:before {
+    content: "\f8bf";
+}
+.icon-database-lock:before {
+    content: "\f8c0";
+}
+.icon-database-slash:before {
+    content: "\f8c1";
+}
+.icon-database-up:before {
+    content: "\f8c2";
+}
+.icon-database-x:before {
+    content: "\f8c3";
+}
+.icon-database:before {
+    content: "\f8c4";
+}
+.icon-houses-fill:before {
+    content: "\f8c5";
+}
+.icon-houses:before {
+    content: "\f8c6";
+}
+.icon-nvidia:before {
+    content: "\f8c7";
+}
+.icon-person-vcard-fill:before {
+    content: "\f8c8";
+}
+.icon-person-vcard:before {
+    content: "\f8c9";
+}
+.icon-sina-weibo:before {
+    content: "\f8ca";
+}
+.icon-tencent-qq:before {
+    content: "\f8cb";
+}
+.icon-wikipedia:before {
+    content: "\f8cc";
+}

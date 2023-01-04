@@ -1,9 +1,9 @@
 @font-face {
     font-family: "test-fantasticon-1-normalize";
-    src: url("./test-fantasticon-1-normalize.ttf?68bd01fe6fcfbf61056f03bbf5017c4f") format("truetype"),
-url("./test-fantasticon-1-normalize.eot?68bd01fe6fcfbf61056f03bbf5017c4f#iefix") format("embedded-opentype"),
-url("./test-fantasticon-1-normalize.woff2?68bd01fe6fcfbf61056f03bbf5017c4f") format("woff2"),
-url("./test-fantasticon-1-normalize.woff?68bd01fe6fcfbf61056f03bbf5017c4f") format("woff");
+    src: url("./test-fantasticon-1-normalize.ttf?76244b892168018221d71dc369e403a8") format("truetype"),
+url("./test-fantasticon-1-normalize.eot?76244b892168018221d71dc369e403a8#iefix") format("embedded-opentype"),
+url("./test-fantasticon-1-normalize.woff2?76244b892168018221d71dc369e403a8") format("woff2"),
+url("./test-fantasticon-1-normalize.woff?76244b892168018221d71dc369e403a8") format("woff");
 }
 
 i[class^="icon-"]:before, i[class*=" icon-"]:before {
