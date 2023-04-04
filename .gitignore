@@ -5,3 +5,4 @@ node_modules
 .env
 test/**/created
 .DS_Store
+package-lock.json
