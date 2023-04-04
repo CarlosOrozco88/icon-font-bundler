@@ -1278,9 +1278,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-cloud-hail:before {
     content: "\f2a4";
 }
-.icon-cloud-haze-1:before {
-    content: "\f2a5";
-}
 .icon-cloud-haze-fill:before {
     content: "\f2a6";
 }
@@ -4266,26 +4263,17 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-ear:before {
     content: "\f689";
 }
-.icon-envelope-check-1:before {
-    content: "\f68a";
-}
 .icon-envelope-check-fill:before {
     content: "\f68b";
 }
 .icon-envelope-check:before {
     content: "\f68c";
 }
-.icon-envelope-dash-1:before {
-    content: "\f68d";
-}
 .icon-envelope-dash-fill:before {
     content: "\f68e";
 }
 .icon-envelope-dash:before {
     content: "\f68f";
-}
-.icon-envelope-exclamation-1:before {
-    content: "\f690";
 }
 .icon-envelope-exclamation-fill:before {
     content: "\f691";
@@ -4299,17 +4287,11 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-envelope-plus:before {
     content: "\f694";
 }
-.icon-envelope-slash-1:before {
-    content: "\f695";
-}
 .icon-envelope-slash-fill:before {
     content: "\f696";
 }
 .icon-envelope-slash:before {
     content: "\f697";
-}
-.icon-envelope-x-1:before {
-    content: "\f698";
 }
 .icon-envelope-x-fill:before {
     content: "\f699";
@@ -4337,12 +4319,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-meta:before {
     content: "\f6a1";
-}
-.icon-mortorboard-fill:before {
-    content: "\f6a2";
-}
-.icon-mortorboard:before {
-    content: "\f6a3";
 }
 .icon-nintendo-switch:before {
     content: "\f6a4";
@@ -4398,9 +4374,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-send-dash:before {
     content: "\f6b5";
 }
-.icon-send-exclamation-1:before {
-    content: "\f6b6";
-}
 .icon-send-exclamation-fill:before {
     content: "\f6b7";
 }
@@ -4433,9 +4406,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-steam:before {
     content: "\f6c1";
-}
-.icon-terminal-dash-1:before {
-    content: "\f6c2";
 }
 .icon-terminal-dash:before {
     content: "\f6c3";
@@ -4524,9 +4494,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-boombox-fill:before {
     content: "\f6df";
 }
-.icon-displayport-1:before {
-    content: "\f6e0";
-}
 .icon-displayport:before {
     content: "\f6e1";
 }
@@ -4562,12 +4529,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-router:before {
     content: "\f6ec";
-}
-.icon-ssd-fill:before {
-    content: "\f6ed";
-}
-.icon-ssd:before {
-    content: "\f6ee";
 }
 .icon-thunderbolt-fill:before {
     content: "\f6ef";
@@ -4887,9 +4848,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-filetype-png:before {
     content: "\f758";
 }
-.icon-filetype-ppt-1:before {
-    content: "\f759";
-}
 .icon-filetype-ppt:before {
     content: "\f75a";
 }
@@ -4934,9 +4892,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-filetype-woff:before {
     content: "\f768";
-}
-.icon-filetype-xls-1:before {
-    content: "\f769";
 }
 .icon-filetype-xls:before {
     content: "\f76a";
@@ -5064,12 +5019,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-filetype-xlsx:before {
     content: "\f793";
 }
-.icon-1-circle-1:before {
-    content: "\f794";
-}
-.icon-1-circle-fill-1:before {
-    content: "\f795";
-}
 .icon-1-circle-fill:before {
     content: "\f796";
 }
@@ -5081,12 +5030,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-1-square:before {
     content: "\f799";
-}
-.icon-2-circle-1:before {
-    content: "\f79a";
-}
-.icon-2-circle-fill-1:before {
-    content: "\f79b";
 }
 .icon-2-circle-fill:before {
     content: "\f79c";
@@ -5100,12 +5043,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-2-square:before {
     content: "\f79f";
 }
-.icon-3-circle-1:before {
-    content: "\f7a0";
-}
-.icon-3-circle-fill-1:before {
-    content: "\f7a1";
-}
 .icon-3-circle-fill:before {
     content: "\f7a2";
 }
@@ -5117,12 +5054,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-3-square:before {
     content: "\f7a5";
-}
-.icon-4-circle-1:before {
-    content: "\f7a6";
-}
-.icon-4-circle-fill-1:before {
-    content: "\f7a7";
 }
 .icon-4-circle-fill:before {
     content: "\f7a8";
@@ -5136,12 +5067,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-4-square:before {
     content: "\f7ab";
 }
-.icon-5-circle-1:before {
-    content: "\f7ac";
-}
-.icon-5-circle-fill-1:before {
-    content: "\f7ad";
-}
 .icon-5-circle-fill:before {
     content: "\f7ae";
 }
@@ -5153,12 +5078,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-5-square:before {
     content: "\f7b1";
-}
-.icon-6-circle-1:before {
-    content: "\f7b2";
-}
-.icon-6-circle-fill-1:before {
-    content: "\f7b3";
 }
 .icon-6-circle-fill:before {
     content: "\f7b4";
@@ -5172,12 +5091,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-6-square:before {
     content: "\f7b7";
 }
-.icon-7-circle-1:before {
-    content: "\f7b8";
-}
-.icon-7-circle-fill-1:before {
-    content: "\f7b9";
-}
 .icon-7-circle-fill:before {
     content: "\f7ba";
 }
@@ -5190,12 +5103,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-7-square:before {
     content: "\f7bd";
 }
-.icon-8-circle-1:before {
-    content: "\f7be";
-}
-.icon-8-circle-fill-1:before {
-    content: "\f7bf";
-}
 .icon-8-circle-fill:before {
     content: "\f7c0";
 }
@@ -5207,12 +5114,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-8-square:before {
     content: "\f7c3";
-}
-.icon-9-circle-1:before {
-    content: "\f7c4";
-}
-.icon-9-circle-fill-1:before {
-    content: "\f7c5";
 }
 .icon-9-circle-fill:before {
     content: "\f7c6";
@@ -5268,12 +5169,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-browser-safari:before {
     content: "\f7d7";
 }
-.icon-c-circle-1:before {
-    content: "\f7d8";
-}
-.icon-c-circle-fill-1:before {
-    content: "\f7d9";
-}
 .icon-c-circle-fill:before {
     content: "\f7da";
 }
@@ -5303,12 +5198,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-cassette:before {
     content: "\f7e3";
-}
-.icon-cc-circle-1:before {
-    content: "\f7e4";
-}
-.icon-cc-circle-fill-1:before {
-    content: "\f7e5";
 }
 .icon-cc-circle-fill:before {
     content: "\f7e6";
@@ -5364,12 +5253,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-google-play:before {
     content: "\f7f7";
 }
-.icon-h-circle-1:before {
-    content: "\f7f8";
-}
-.icon-h-circle-fill-1:before {
-    content: "\f7f9";
-}
 .icon-h-circle-fill:before {
     content: "\f7fa";
 }
@@ -5394,12 +5277,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 .icon-microsoft-teams:before {
     content: "\f801";
 }
-.icon-p-circle-1:before {
-    content: "\f802";
-}
-.icon-p-circle-fill-1:before {
-    content: "\f803";
-}
 .icon-p-circle-fill:before {
     content: "\f804";
 }
@@ -5423,12 +5300,6 @@ i[class^="icon-"]:before, i[class*=" icon-"]:before {
 }
 .icon-prescription2:before {
     content: "\f80b";
-}
-.icon-r-circle-1:before {
-    content: "\f80c";
-}
-.icon-r-circle-fill-1:before {
-    content: "\f80d";
 }
 .icon-r-circle-fill:before {
     content: "\f80e";
