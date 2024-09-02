@@ -1,10 +1,10 @@
-import { FontAssetType } from 'fantasticon';
+import { FontAssetType } from '@twbs/fantasticon';
 import { workspace, Uri, Progress } from 'vscode';
 import path from 'path';
 import fs from 'fs';
 
 import Handlebars from 'handlebars';
-import { IconFontBundlerFontConfig, IconFontBundlerItem } from '../Types/Types';
+import { IconFontBundlerFontConfig, IconFontBundlerItem, Level } from '../Types/Types';
 import Log from '../Utils/Log';
 
 export default {
@@ -35,7 +35,8 @@ export default {
           });
           const oCodePointsUri = Uri.file(path.join(oFontOptions.outputDir, `${oFontOptions.name}.${sExtension}`));
           await workspace.fs.writeFile(oCodePointsUri, Buffer.from(sFile));
-        } catch (oError) {
+        } catch (oError: any) {
+          Log.general(oError.message, Level.ERROR);
           //debugger;
         }
       }

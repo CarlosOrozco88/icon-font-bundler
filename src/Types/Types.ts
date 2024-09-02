@@ -1,4 +1,4 @@
-import { FontAssetType, OtherAssetType } from 'fantasticon';
+import { FontAssetType, OtherAssetType } from '@twbs/fantasticon';
 
 export interface Templates {
   css: string;

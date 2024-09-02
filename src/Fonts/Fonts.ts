@@ -1,4 +1,4 @@
-import { FontAssetType, OtherAssetType } from 'fantasticon';
+import { FontAssetType, OtherAssetType } from '@twbs/fantasticon';
 import { window, workspace, Uri, ProgressLocation, QuickPickItem, Progress, RelativePattern } from 'vscode';
 import path from 'path';
 import fs from 'fs';
@@ -70,7 +70,7 @@ export default {
             title: `Icon Font Bundler > Generating font ${oFontConfig.font.name}`,
             cancellable: true,
           },
-          async (progress, token) => {
+          async (progress) => {
             await this.generateFont(oFontConfig, progress);
             window.showInformationMessage(`Font ${oFontConfig.font.name} generated successfully`);
           }
@@ -108,7 +108,7 @@ export default {
           title: `Icon Font Bundler > Generating all fonts`,
           cancellable: true,
         },
-        async (progress, token) => {
+        async (progress) => {
           const multiplier = 1 / aFonts.length;
           for (const oFontConfig of aFonts) {
             await this.generateFont(oFontConfig, progress, multiplier);

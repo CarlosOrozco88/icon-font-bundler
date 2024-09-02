@@ -1,5 +1,3 @@
-'use strict';
-
 const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -48,7 +46,7 @@ module.exports = {
     new webpack.ProgressPlugin(),
     new CleanWebpackPlugin(),
     new CopyPlugin({
-      patterns: [path.dirname(require.resolve('ttf2woff2/jssrc/ttf2woff2.wasm'))],
+      patterns: [path.dirname(require.resolve('./node_modules/ttf2woff2/jssrc/ttf2woff2.wasm'))],
     }),
   ],
 };

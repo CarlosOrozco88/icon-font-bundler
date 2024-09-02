@@ -1,4 +1,4 @@
-import { generateFonts } from 'fantasticon';
+import { generateFonts } from '@twbs/fantasticon';
 import { workspace, Uri, Progress } from 'vscode';
 import path from 'path';
 import assert from 'assert';
@@ -18,7 +18,7 @@ export default {
     progress?.report({ increment: 30 * multiplier, message });
     const oFantasticonOptions: any = { ...oFontOptions };
     delete oFantasticonOptions.type;
-    const sIcons = await generateFonts(oFantasticonOptions);
+    await generateFonts(oFantasticonOptions);
     Log.fantasticon(`Fontfiles generated succesfully`, Level.SUCCESS);
 
     message = Log.fantasticon(`Writing codepoints...`);
