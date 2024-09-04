@@ -1,4 +1,7 @@
-## 0.0.6 (02-09-2024)
+## 0.0.8 (04-09-2024)
+- Dependencies fixed
+
+## 0.0.7 (02-09-2024)
 - Dependencies upgrade
 - Bootstrap testing upgraded
 - Changed `fantasticon` dependency in favor of `@twbs/fantasticon`
